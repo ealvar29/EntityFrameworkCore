@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WizLib_Model.Models;
 
 namespace WizLib_DataAccess.Data
 {
@@ -14,6 +15,7 @@ namespace WizLib_DataAccess.Data
 
         }
 
+        public DbSet<Category> Categories { get; set; }
 
     }
 }
