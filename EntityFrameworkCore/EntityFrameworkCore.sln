@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.0.31717.71
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkCore", "EntityFrameworkCore\EntityFrameworkCore.csproj", "{C67A028F-B833-46A4-B14C-3C3A15D4CDAD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{776DCF39-C789-4934-A5C8-EE6A57C76ADE} = {776DCF39-C789-4934-A5C8-EE6A57C76ADE}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WizLib_DataAccess", "WizLib_DataAccess\WizLib_DataAccess.csproj", "{AE79BC39-3A9A-43F2-9FD5-706E53BB64F1}"
 EndProject
