@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using WizLib_DataAccess.Data;
@@ -9,9 +10,10 @@ using WizLib_DataAccess.Data;
 namespace WizLib_DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211003182644_AddPublsherAndAuthor")]
+    partial class AddPublsherAndAuthor
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,7 +23,7 @@ namespace WizLib_DataAccess.Migrations
 
             modelBuilder.Entity("WizLib_Model.Models.Author", b =>
                 {
-                    b.Property<int>("Author_Id")
+                    b.Property<int>("Publisher_Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
@@ -40,7 +42,7 @@ namespace WizLib_DataAccess.Migrations
                     b.Property<string>("Location")
                         .HasColumnType("text");
 
-                    b.HasKey("Author_Id");
+                    b.HasKey("Publisher_Id");
 
                     b.ToTable("Authors");
                 });
